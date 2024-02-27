@@ -10,6 +10,21 @@ public class FizzBuzzService {
      * @Throws IllegalArgumentException for values < 1
      */
     public String fizzBuzz(int number) {
-        return "";
+        if(number < 1){
+            throw new IllegalArgumentException("error");
+        }
+        else if(number % 3 ==0 && number % 5 == 0) {
+            return "FizzBuzz";
+        }
+        else if(number % 3 == 0) {
+            return "Fizz";
+        }
+        else if(number % 5 == 0){
+            return "Buzz";
+            }
+        else {
+            String num = Integer.toString(number);
+            return num;
+        }
     }
 }
